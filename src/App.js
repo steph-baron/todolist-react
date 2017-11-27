@@ -24,7 +24,7 @@ class App extends Component {
       <div>
       <ToDoList items={this.state.items}/>
       <form onSubmit={this.handleItem}>
-        <input onChange={this.handleChange} className='todo' type="text"/>
+        <input value={this.state.text} onChange={this.handleChange} className='todo' type="text"/>
         <input type="submit"/>
       </form>
       </div>
