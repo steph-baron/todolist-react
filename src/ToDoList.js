@@ -1,11 +1,13 @@
 import React from 'react';
 
-const ToDoList = () => {
+const ToDoList = (props) => {
   return (
+    <div>
+    <h1>Your To-Do List</h1>
     <ul>
-    // generating list items here
-      { items.map((item, i)=> <li key={i}>(item)</li>)}
+      { props.items.map((item, i)=> <li key={i}>(item)</li>)}
     </ul>
+    </div>
   )
 }
 

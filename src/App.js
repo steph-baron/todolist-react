@@ -9,13 +9,13 @@ class App extends Component {
   }
 
 
-  handleItem(event) => {
+  handleItem = (event)=> {
     event.preventDefault()
     this.setState({items: [this.state.text, ...this.state.items]})
     //handling the submit of the form
   }
 
-  handleChange(event) => {
+  handleChange = (event)=> {
     this.setState({ text: event.target.value })
     // listening for change in input box
   }
