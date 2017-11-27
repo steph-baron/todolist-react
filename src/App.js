@@ -5,21 +5,25 @@ import ToDoList from './ToDoList'
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = { items: []}
+    this.state = { items: [], text: ''}
   }
 
 
   handleItem(event){
-    var item = event.target.value;
-    console.log("This is item: ", item)
-    this.setState({items: [event.target.value, ...this.state.items]})
+    this.setState({items: [this.state.text, ...this.state.items]})
+    //handling the submit of the form
+  }
+
+  handleChange(event){
+    this.setState({ text: event.target.value })
+    // listening for change in input box
   }
   render() {
     return (
       <div>
       <ToDoList/>
       <form onSubmit={this.handleItem}>
-        <input className='todo' type="text"/>
+        <input onChange={this.handleChange} className='todo' type="text"/>
         <input type="submit"/>
       </form>
       </div>
