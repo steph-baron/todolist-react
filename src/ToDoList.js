@@ -3,7 +3,8 @@ import React from 'react';
 const ToDoList = () => {
   return (
     <ul>
-      <li></li> 
+    // generating list items here
+      { items.map((item, i)=> <li key={i}>(item)</li>)}
     </ul>
   )
 }

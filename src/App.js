@@ -9,19 +9,20 @@ class App extends Component {
   }
 
 
-  handleItem(event){
+  handleItem(event) => {
+    event.preventDefault()
     this.setState({items: [this.state.text, ...this.state.items]})
     //handling the submit of the form
   }
 
-  handleChange(event){
+  handleChange(event) => {
     this.setState({ text: event.target.value })
     // listening for change in input box
   }
   render() {
     return (
       <div>
-      <ToDoList/>
+      <ToDoList items={this.state.items}/>
       <form onSubmit={this.handleItem}>
         <input onChange={this.handleChange} className='todo' type="text"/>
         <input type="submit"/>
