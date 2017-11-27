@@ -12,6 +12,7 @@ class App extends Component {
   handleItem = (event)=> {
     event.preventDefault()
     this.setState({items: [this.state.text, ...this.state.items]})
+    this.state.text = " "
     //handling the submit of the form
   }
 

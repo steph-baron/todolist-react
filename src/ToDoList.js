@@ -5,7 +5,7 @@ const ToDoList = (props) => {
     <div>
     <h1>Your To-Do List</h1>
     <ul>
-      { props.items.map((item, i)=> <li key={i}>(item)</li>)}
+      { props.items.map((item, i)=> <li key={i}>{item}</li>)}
     </ul>
     </div>
   )
